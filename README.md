@@ -38,7 +38,7 @@ My-MPC-Agent/          ← one folder, inside your synced folder
     ├─ MPC Sample user guide (PDF)
     └─ MPC Sample firmware updater
 ```
-Open a terminal in `My-MPC-Agent`, start Claude Code (`claude`), and type something like:
+Plug your MPC into the computer with the USB-C data cable and power it on, on its normal screen (**not in SD Card mode**). Then open a terminal in `My-MPC-Agent`, start Claude Code (`claude`), and type something like:
 
 > Read seed.md. You're my MPC agent now. Set yourself up.
 

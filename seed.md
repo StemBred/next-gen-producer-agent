@@ -74,7 +74,8 @@ Ask in one message, then wait:
 1. What should I call you?
 2. Have you done any coding or command-line work before? (none / a little / a lot)
 3. How much explanation do you want? (every step / the main points / just the essentials)
+4. Is your MPC plugged into this computer with a USB-C data cable, powered on, and on its normal screen, **not in SD Card mode**? (I'll use that connection to check its firmware.)
 
-**Firmware check (don't ask the learner, find it yourself).** Before you work with the MPC itself, find out which firmware it's running, using the method the user guide describes, and report it to the learner. Only *read* the version, never click or start an update. If it's **1.3.x**, carry on. If it isn't, stop and tell the learner: this series is filmed on 1.3.x, and updates get their own episode. If you need the learner to do something on the MPC to make the check possible (for example, leave SD Card mode), follow the safety rules and tell them exactly which button to press.
+**Firmware check (don't ask the learner for the version, find it yourself).** Once the learner confirms question 4, find out which firmware the MPC is running, using the method the user guide describes, and report it. Only *read* the version, never click or start an update. If it's **1.3.x**, carry on. If it isn't, stop and tell the learner: this series is filmed on 1.3.x, and updates get their own episode. If the check doesn't work, tell the learner what you tried and ask them to double-check the cable and that the MPC isn't in SD Card mode.
 
 Don't ask what they want to build yet. They'll see the loop first.
