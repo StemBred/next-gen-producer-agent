@@ -13,7 +13,7 @@ New here from a video? Welcome. Everything the videos ask you to grab is below.
 
 ## ⬇️ Step 1: get `seed.md`
 **[Open seed.md](seed.md)**, then click the **Download raw file** button (the ⬇ icon at the top right of the file).
-Save it into your project folder (see *Set up* below). That one file is all you need from this repo.
+Save it into your project folder (see *Set up* below). Do the same with **[mpc-sample-proven.md](mpc-sample-proven.md)**, but put that one in your `inputs` folder. It's what our agent already proved on the MPC Sample, so yours doesn't start from zero.
 
 ![Who carries the work? AI chat vs a coding agent](images/chat-vs-agent.png)
 
@@ -36,7 +36,8 @@ My-MPC-Agent/          ← one folder, inside your synced folder
 ├─ seed.md             ← from this repo
 └─ inputs/
     ├─ MPC Sample user guide (PDF)
-    └─ MPC Sample firmware updater
+    ├─ MPC Sample firmware updater
+    └─ mpc-sample-proven.md   ← from this repo: what our agent already proved
 ```
 Plug your MPC into the computer with the USB-C data cable and power it on, on its normal screen (**not in SD Card mode**). Then open a terminal in `My-MPC-Agent`, start Claude Code (`claude`), and type something like:
 
