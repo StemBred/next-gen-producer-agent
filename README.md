@@ -44,6 +44,8 @@ Plug your MPC into the computer with the USB-C data cable and power it on, on it
 
 From there, follow along with the [videos](#-start-with-the-videos). Your agent builds out the rest of the folder with you.
 
+**The prompts we type in the videos are in [prompts.md](prompts.md),** so you can copy them if you get stuck. Saying it in your own words works too.
+
 ## Community resources
 - [open-mpc](https://github.com/open-mpc): a community open-source (MIT) project documenting how MPC devices work, the MPC Sample included. It's a helpful map, not official, so your agent checks its claims.
 
