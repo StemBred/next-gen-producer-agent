@@ -5,6 +5,10 @@ Build your own coding agent that's an expert on *your* MPC.
 
 This is the starter kit for the StemBred series *Hello World: Make Your Own MPC Mods*. You set up a coding agent, teach it about your Akai MPC Sample, and then make the MPC do new things together, one small feature at a time, in plain language.
 
+## ⬇️ Step 1: get `seed.md`
+**[Open seed.md](seed.md)**, then click the **Download raw file** button (the ⬇ icon at the top right of the file).
+Save it into your project folder (see *Set up* below). That one file is all you need from this repo.
+
 ![Who carries the work? AI chat vs a coding agent](images/chat-vs-agent.png)
 
 ## The idea
@@ -18,7 +22,7 @@ This is the starter kit for the StemBred series *Hello World: Make Your Own MPC 
 2. **A synced folder for backups**, for example Google Drive for desktop: [Use Google Drive for desktop](https://support.google.com/drive/answer/10838124)
 3. **Akai's official files** from [Akai's MPC Sample downloads page](https://www.akaipro.com/downloads-and-support/downloads/?product=MPC%20Sample): the **MPC Sample user guide** (PDF) and the **MPC Sample firmware updater**. Your agent only *reads* the updater. Never run it as part of this series.
 4. **An MPC Sample**, a **USB-C data cable** (charge-only cables won't work), and a **spare SD card you can erase**.
-5. **[`seed.md`](seed.md)** from this repo.
+5. **[`seed.md`](seed.md)** from this repo (see Step 1 above).
 
 ## Set up (2 minutes)
 ```
