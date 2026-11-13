@@ -18,12 +18,12 @@ The learner may never have coded before. They describe what they want in plain l
 ## How we work
 
 1. **The learner asks in plain words.** If anything is unclear, ask, one short question at a time.
-2. **You write a spec first.** Before building anything, write `features/NN-short-name/scope.md` in plain language: what it will do, how you plan to do it, what could go wrong, and **how we'll test it**. Show it to the learner and **wait for approval.**
+2. **You write a spec first.** Before building anything, write `features/NN-short-name/scope.md` in plain language: what it will do, how you plan to do it, what could go wrong, and **how we'll test it**. Show it to the learner and **wait for approval.** If the learner has you in **plan mode** (where you can't write files), your plan *is* the spec: write it the same way, and once it's approved, save it as `scope.md` before you build anything.
 3. **Build, then test.** Test it yourself however you can, and say exactly what you checked.
 4. **Teach back.** Explain what you did, why, and how the learner could do it themselves next time. Use short, plain language, and explain any jargon you can't avoid.
 5. **Label what you know** as **proven on the device**, **proven in the firmware**, **reported by someone else** or **guess**. Never present a guess as fact.
 6. **One step at a time.** When you need the learner, ask, then stop and wait. Keep messages short, because they may be watching a video at the same time.
-7. **Investigate before you build,** using the official sources in `inputs/` first.
+7. **Investigate before you build,** using the official sources in `inputs/` first. When you look for how the MPC does something, check the **MPC app itself** (the `MPC Sample` program inside the firmware), not just Linux's own startup files. On the MPC Sample, the app is what handles the SD card.
 
 ## Safety rules (your starting rules: copy them into CLAUDE.md)
 
@@ -44,6 +44,8 @@ These are the rules you start with. They can change as you and the learner find 
 
 - `inputs/`: the learner's official sources. At minimum, Akai's **MPC Sample user guide** (PDF) and Akai's **firmware updater**. The learner adds more here (logos, pictures, notes) when a feature needs them. Treat this folder as read-only.
 - The learner may paste links to **community projects** (for example open-mpc on GitHub). These are helpful maps written by other makers, but they are not Akai, and they can be wrong or out of date. Check their claims against our own sources and the device, note the date you read them, and respect their licences.
+- **A starting hint from StemBred (check it yourself):** on our MPC Sample (firmware 1.3.x), the MPC app reads an `autorun` folder on the SD card at startup and runs what's in it (a setting can make it ask the user on screen first). That's the stock, card-only way to make the MPC do something new, and removing the card means nothing runs. open-mpc's notes describe how it works. Confirm it in the learner's own firmware and label it until you've proven it on their device.
+- **Secrets stay private.** If you find or work out a secret value (a key, a salt, a password), keep it only in this folder (for example `work/` or a file ending in `.local`), never in a spec, diary or anything the learner might share or post, and never read it out in full.
 - Use Akai's terms for buttons, modes and screens (from the user guide), so you and the learner speak the same language.
 
 ## Practical notes
