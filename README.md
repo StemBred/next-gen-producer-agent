@@ -5,6 +5,12 @@ Build your own coding agent that's an expert on *your* MPC.
 
 This is the starter kit for the StemBred series *Hello World: Make Your Own MPC Mods*. You set up a coding agent, teach it about your Akai MPC Sample, and then make the MPC do new things together, one small feature at a time, in plain language.
 
+## 📺 Start with the videos
+The video series is the place to start: it walks you through putting all the pieces together, step by step.
+- **Part 1: Set up your agent from scratch**: *video link coming soon*
+
+New here from a video? Welcome. Everything the videos ask you to grab is below.
+
 ## ⬇️ Step 1: get `seed.md`
 **[Open seed.md](seed.md)**, then click the **Download raw file** button (the ⬇ icon at the top right of the file).
 Save it into your project folder (see *Set up* below). That one file is all you need from this repo.
@@ -36,7 +42,7 @@ Open a terminal in `My-MPC-Agent`, start Claude Code (`claude`), and type someth
 
 > Read seed.md. You're my MPC agent now. Set yourself up.
 
-From there, follow the videos. Your agent builds out the rest of the folder with you.
+From there, follow along with the [videos](#-start-with-the-videos). Your agent builds out the rest of the folder with you.
 
 ## Community resources
 - [open-mpc](https://github.com/open-mpc): a community open-source (MIT) project documenting how MPC devices work, the MPC Sample included. It's a helpful map, not official, so your agent checks its claims.
