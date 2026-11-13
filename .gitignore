@@ -1,0 +1,13 @@
+# Never publish these (secrets, private session data, firmware material)
+*.local
+.salt*
+salt.bin
+*token*
+*.jsonl
+*.jsonl.gz
+agent-memory/
+transcripts/
+*.img
+*.ext4
+*Updater*.exe
+work/
