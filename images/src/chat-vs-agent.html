@@ -1,0 +1,217 @@
+<title>Chat vs Coding Agent</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: two panels side by side (stacked on phones), same star diagram shape so the one difference reads instantly: who sits in the centre. Single-theme by choice: StemBred navy + gold. */
+:root {
+  --bg: #0d1830;
+  --panel: #14234a;
+  --node: #1c2f5e;
+  --line: #8a9ec6;
+  --gold: #e8b64c;
+  --gold-ink: #1a1405;
+  --fg: #eef2fa;
+  --muted: #9fb0cf;
+  --chat: #2a3554;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--body); line-height: 1.5; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-block: 40px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+header { display: grid; gap: 8px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 52px); line-height: 1.05; margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); max-width: 62ch; margin: 0; font-size: 16px; }
+.panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 980px) { .panels { grid-template-columns: 1fr; } }
+.panel { background: var(--panel); border-radius: 14px; padding: 22px 20px 20px; display: grid; gap: 14px; min-width: 0; }
+.panel h2 { font-family: var(--display); font-weight: 600; font-size: 24px; margin: 0; }
+.panel .tag { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.panel.agent .tag { color: var(--gold); }
+svg { width: 100%; height: auto; display: block; }
+ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; counter-reset: s; }
+ol li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: start; font-size: 15px; }
+ol li::before { counter-increment: s; content: counter(s); font-family: var(--mono); font-size: 12px; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: var(--node); color: var(--fg); border: 1px solid var(--line); margin-top: 1px; }
+.agent ol li::before { background: var(--gold); color: var(--gold-ink); border-color: var(--gold); }
+.verdict { font-family: var(--display); font-weight: 600; font-size: 18px; padding-top: 12px; border-top: 1px solid rgba(138,158,198,.3); }
+.verdict b { color: var(--gold); font-weight: 800; }
+footer { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; color: var(--muted); font-size: 13px; }
+footer .brand { font-family: var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">StemBred · MPC dev series</div>
+    <h1>Who carries the work?</h1>
+    <p class="lede">Same gear, three setups. With a chat assistant, everything passes through you. With a coding agent, you set direction and it does the carrying. Your next-gen producer agent takes it further — one agent across your whole rig.</p>
+  </header>
+
+  <div class="panels">
+    <!-- CHAT: human in the middle -->
+    <section class="panel">
+      <div class="tag">AI chat · human in the middle</div>
+      <h2>You are the cable</h2>
+      <svg viewBox="0 0 560 440" role="img" aria-label="Chat assistant: you sit in the middle and carry every message between the chat, your files, the terminal and the MPC">
+        <defs>
+          <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a9ec6"/></marker>
+        </defs>
+        <g stroke="#8a9ec6" stroke-width="2" fill="none" marker-start="url(#a1)" marker-end="url(#a1)">
+          <line x1="280" y1="92" x2="280" y2="188"/>
+          <line x1="152" y1="220" x2="208" y2="220"/>
+          <line x1="280" y1="252" x2="280" y2="348"/>
+          <line x1="352" y1="220" x2="408" y2="220"/>
+        </g>
+        <g font-family="IBM Plex Sans, Segoe UI, sans-serif" text-anchor="middle">
+          <rect x="200" y="36" width="160" height="56" rx="10" fill="#2a3554" stroke="#8a9ec6"/>
+          <text x="280" y="62" fill="#eef2fa" font-size="16" font-weight="600">AI chat</text>
+          <text x="280" y="80" fill="#9fb0cf" font-size="12">browser tab</text>
+
+          <rect x="12" y="192" width="140" height="56" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="82" y="218" fill="#eef2fa" font-size="16" font-weight="600">Your files</text>
+          <text x="82" y="236" fill="#9fb0cf" font-size="12">project folder</text>
+
+          <rect x="408" y="192" width="140" height="56" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="478" y="218" fill="#eef2fa" font-size="16" font-weight="600">MPC Sample</text>
+          <text x="478" y="236" fill="#9fb0cf" font-size="12">card + screen</text>
+
+          <rect x="200" y="348" width="160" height="56" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="280" y="374" fill="#eef2fa" font-size="16" font-weight="600">Terminal</text>
+          <text x="280" y="392" fill="#9fb0cf" font-size="12">build + run</text>
+
+          <rect x="208" y="188" width="144" height="64" rx="32" fill="#e8b64c"/>
+          <text x="280" y="226" fill="#1a1405" font-size="20" font-weight="700" font-family="Bricolage Grotesque, Segoe UI, sans-serif">YOU</text>
+        </g>
+        <g font-family="IBM Plex Mono, Consolas, monospace" font-size="12" text-anchor="middle">
+          <circle cx="298" cy="140" r="11" fill="#1c2f5e" stroke="#8a9ec6"/><text x="298" y="144" fill="#eef2fa">1</text>
+          <circle cx="180" cy="200" r="11" fill="#1c2f5e" stroke="#8a9ec6"/><text x="180" y="204" fill="#eef2fa">2</text>
+          <circle cx="298" cy="300" r="11" fill="#1c2f5e" stroke="#8a9ec6"/><text x="298" y="304" fill="#eef2fa">3</text>
+          <circle cx="380" cy="200" r="11" fill="#1c2f5e" stroke="#8a9ec6"/><text x="380" y="204" fill="#eef2fa">4</text>
+        </g>
+      </svg>
+      <ol>
+        <li>Ask the chat, then copy the code it gives you.</li>
+        <li>Paste the code into the right files.</li>
+        <li>Run it, then copy any errors back into the chat.</li>
+        <li>Swap the SD card, look at the screen, and describe what happened.</li>
+      </ol>
+      <div class="verdict">Every fix repeats 1 to 4, and <b>every message goes through you.</b></div>
+    </section>
+
+    <!-- AGENT: agent in the loop, human directs -->
+    <section class="panel agent">
+      <div class="tag">Coding agent · you direct</div>
+      <h2>You are the producer</h2>
+      <svg viewBox="0 0 560 440" role="img" aria-label="Coding agent: you ask and approve; the agent works directly with your files, the terminal and the MPC, then reports back">
+        <defs>
+          <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a9ec6"/></marker>
+          <marker id="g2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8b64c"/></marker>
+        </defs>
+        <g stroke="#e8b64c" stroke-width="2.5" fill="none">
+          <line x1="262" y1="92" x2="262" y2="186" marker-end="url(#g2)"/>
+          <line x1="298" y1="188" x2="298" y2="94" marker-end="url(#g2)"/>
+        </g>
+        <g stroke="#8a9ec6" stroke-width="2" fill="none" marker-start="url(#a2)" marker-end="url(#a2)">
+          <line x1="152" y1="220" x2="204" y2="220"/>
+          <line x1="280" y1="254" x2="280" y2="348"/>
+          <line x1="356" y1="220" x2="408" y2="220"/>
+        </g>
+        <g font-family="IBM Plex Sans, Segoe UI, sans-serif" text-anchor="middle">
+          <rect x="208" y="36" width="144" height="56" rx="28" fill="#e8b64c"/>
+          <text x="280" y="70" fill="#1a1405" font-size="20" font-weight="700" font-family="Bricolage Grotesque, Segoe UI, sans-serif">YOU</text>
+
+          <rect x="12" y="192" width="140" height="56" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="82" y="218" fill="#eef2fa" font-size="16" font-weight="600">Your files</text>
+          <text x="82" y="236" fill="#9fb0cf" font-size="12">code + memories</text>
+
+          <rect x="408" y="192" width="140" height="56" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="478" y="218" fill="#eef2fa" font-size="16" font-weight="600">MPC Sample</text>
+          <text x="478" y="236" fill="#9fb0cf" font-size="12">over USB</text>
+
+          <rect x="200" y="348" width="160" height="56" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="280" y="374" fill="#eef2fa" font-size="16" font-weight="600">Terminal</text>
+          <text x="280" y="392" fill="#9fb0cf" font-size="12">build + run</text>
+
+          <rect x="204" y="186" width="152" height="68" rx="12" fill="#14234a" stroke="#e8b64c" stroke-width="2"/>
+          <text x="280" y="216" fill="#eef2fa" font-size="17" font-weight="700" font-family="Bricolage Grotesque, Segoe UI, sans-serif">YOUR AGENT</text>
+          <text x="280" y="236" fill="#9fb0cf" font-size="12">lives in your folder</text>
+        </g>
+        <g font-family="IBM Plex Mono, Consolas, monospace" font-size="12" text-anchor="middle">
+          <circle cx="244" cy="140" r="11" fill="#e8b64c"/><text x="244" y="144" fill="#1a1405">1</text>
+          <circle cx="178" cy="200" r="11" fill="#e8b64c"/><text x="178" y="204" fill="#1a1405">2</text>
+          <circle cx="298" cy="300" r="11" fill="#e8b64c"/><text x="298" y="304" fill="#1a1405">3</text>
+          <circle cx="382" cy="200" r="11" fill="#e8b64c"/><text x="382" y="204" fill="#1a1405">4</text>
+          <circle cx="316" cy="140" r="11" fill="#e8b64c"/><text x="316" y="144" fill="#1a1405">5</text>
+        </g>
+      </svg>
+      <ol>
+        <li>Ask in plain words, then approve the spec it writes.</li>
+        <li>It writes the code, plus its own notes and memories.</li>
+        <li>It builds and runs it, and asks before installing anything.</li>
+        <li>It pushes the change to the MPC, presses buttons and grabs the screen.</li>
+        <li>It shows you the test result and teaches back what it did.</li>
+      </ol>
+      <div class="verdict">You decide and approve. <b>The agent carries the work.</b></div>
+    </section>
+
+    <!-- NEXT-GEN: one agent, the whole rig -->
+    <section class="panel agent">
+      <div class="tag">Your rig · the agent orchestrates</div>
+      <h2>Your next-gen producer agent</h2>
+      <svg viewBox="0 0 560 440" role="img" aria-label="Your next-gen producer agent: you direct one agent that works across all your hardware and software — the MPC Sample and your other gear, your DAW, synths and virtual instruments">
+        <defs>
+          <marker id="g3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8b64c"/></marker>
+        </defs>
+        <!-- agent out to every node -->
+        <g stroke="#e8b64c" stroke-width="2" fill="none" marker-end="url(#g3)">
+          <line x1="196" y1="190" x2="178" y2="136"/>
+          <line x1="196" y1="214" x2="178" y2="272"/>
+          <line x1="364" y1="188" x2="386" y2="122"/>
+          <line x1="364" y1="201" x2="386" y2="212"/>
+          <line x1="364" y1="214" x2="386" y2="304"/>
+        </g>
+        <!-- you direct the agent -->
+        <g stroke="#e8b64c" stroke-width="2.5" fill="none">
+          <line x1="280" y1="76" x2="280" y2="162" marker-end="url(#g3)"/>
+        </g>
+        <g font-family="IBM Plex Sans, Segoe UI, sans-serif" text-anchor="middle">
+          <rect x="208" y="24" width="144" height="52" rx="26" fill="#e8b64c"/>
+          <text x="280" y="57" fill="#1a1405" font-size="20" font-weight="700" font-family="Bricolage Grotesque, Segoe UI, sans-serif">YOU</text>
+
+          <text x="96" y="100" fill="#e8b64c" font-size="11" font-family="IBM Plex Mono, Consolas, monospace" letter-spacing="1.5">HARDWARE</text>
+          <rect x="18" y="108" width="156" height="52" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="96" y="132" fill="#eef2fa" font-size="15" font-weight="600">MPC Sample</text>
+          <text x="96" y="150" fill="#9fb0cf" font-size="11">card + screen</text>
+          <rect x="18" y="250" width="156" height="52" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="96" y="274" fill="#eef2fa" font-size="15" font-weight="600">Your other gear</text>
+          <text x="96" y="292" fill="#9fb0cf" font-size="11">more hardware</text>
+
+          <text x="466" y="88" fill="#e8b64c" font-size="11" font-family="IBM Plex Mono, Consolas, monospace" letter-spacing="1.5">SOFTWARE</text>
+          <rect x="386" y="96" width="156" height="48" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="464" y="126" fill="#eef2fa" font-size="15" font-weight="600">DAW</text>
+          <rect x="386" y="188" width="156" height="48" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="464" y="218" fill="#eef2fa" font-size="15" font-weight="600">Synth</text>
+          <rect x="386" y="280" width="156" height="48" rx="10" fill="#1c2f5e" stroke="#8a9ec6"/>
+          <text x="464" y="309" fill="#eef2fa" font-size="14" font-weight="600">Virtual instruments</text>
+
+          <rect x="196" y="164" width="168" height="72" rx="14" fill="#14234a" stroke="#e8b64c" stroke-width="2.5"/>
+          <text x="280" y="196" fill="#eef2fa" font-size="17" font-weight="700" font-family="Bricolage Grotesque, Segoe UI, sans-serif">YOUR AGENT</text>
+          <text x="280" y="216" fill="#9fb0cf" font-size="11">knows your whole rig</text>
+        </g>
+      </svg>
+      <ol>
+        <li>One agent that knows all your gear, not just the MPC.</li>
+        <li>It moves work between your hardware and your DAW, synths and instruments.</li>
+        <li>New gear or a new idea? Teach it once; it remembers.</li>
+        <li>It keeps growing in the direction <em>you</em> build.</li>
+      </ol>
+      <div class="verdict">One agent. <b>Your whole studio.</b></div>
+    </section>
+  </div>
+
+  <footer>
+    <span class="brand">Your MPC. Your ideas.</span>
+    <span>Part 1 starts with the MPC Sample and the middle panel. The whole rig on the right is where the series heads.</span>
+  </footer>
+</div>
