@@ -1,7 +1,7 @@
 # What StemBred's agent has proven on the MPC Sample
 
-> **Learner:** put this file in your `inputs` folder. It's what our agent learned the hard way, so yours doesn't start from zero.
-> **Agent:** every item here is **reported by StemBred**: proven on StemBred's own MPC Sample on firmware **1.3.0.12**. Treat it as a strong lead, not as proof on *this* learner's device. Label it "reported" until it works here, then upgrade it to "proven on the device".
+> **Learner:** put this file in your `inputs` folder. It's what our agent learned the hard way, so yours doesn't start from zero. Your agent doesn't just take our word for it — it proves each item on *your* MPC before it relies on it. That's what makes it **yours**, and extendable in the direction you set as your own work evolves.
+> **Agent:** every item here is **reported by StemBred**: proven on StemBred's own MPC Sample on firmware **1.3.0.12**. Treat it as a strong lead, not as proof on *this* learner's device. Label it "reported" until it works here, then upgrade it to "proven on the device". As you and the learner build, add what *you* prove to the learner's own memories — this file is a starting point, not a ceiling.
 
 ## Running code from the SD card (autorun)
 1. The **MPC app itself** (not Linux startup) reads an `autorun` folder at the root of the SD card when it starts, and runs the script listed in `autorun/autorun.json` with `sh`, as root.
