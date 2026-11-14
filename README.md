@@ -15,7 +15,7 @@ New here from a video? Welcome. Everything the videos ask you to grab is below.
 **[Open seed.md](seed.md)**, then click the **Download raw file** button (the ⬇ icon at the top right of the file).
 Save it into your project folder (see *Set up* below). Do the same with **[mpc-sample-proven.md](mpc-sample-proven.md)**, but put that one in your `inputs` folder. It's what our agent already proved on the MPC Sample, so yours doesn't start from zero.
 
-![Who carries the work? Three setups: you as the cable, you directing one agent, and your next-gen producer agent across your whole rig](images/chat-vs-agent.png)
+![The producer, evolved — Three setups: you as the cable, you directing one agent, and your next-gen producer agent across your whole rig](images/chat-vs-agent.png)
 
 ## The idea
 - **You describe, your agent builds.** You say what you want in your own words. Your agent writes a short spec, you approve it, then it builds and tests it.
