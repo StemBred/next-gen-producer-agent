@@ -28,6 +28,8 @@ h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 
 @media (max-width: 980px) { .panels { grid-template-columns: 1fr; } }
 .panel { background: var(--panel); border-radius: 14px; padding: 22px 20px 20px; display: grid; gap: 14px; min-width: 0; }
 .panel h2 { font-family: var(--display); font-weight: 600; font-size: 24px; margin: 0; }
+.panel .phrase { font-family: var(--display); font-weight: 600; font-size: 16px; color: var(--muted); margin: -6px 0 0; }
+.panel.agent .phrase { color: var(--gold); }
 .panel .tag { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .panel.agent .tag { color: var(--gold); }
 svg { width: 100%; height: auto; display: block; }
@@ -53,6 +55,7 @@ footer .brand { font-family: var(--mono); letter-spacing: .12em; text-transform:
     <section class="panel">
       <div class="tag">AI chat · human in the middle</div>
       <h2>You are the cable</h2>
+      <p class="phrase">Everything runs through you.</p>
       <svg viewBox="0 0 560 440" role="img" aria-label="Chat assistant: you sit in the middle and carry every message between the chat, your files, the terminal and the MPC">
         <defs>
           <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a9ec6"/></marker>
@@ -103,6 +106,7 @@ footer .brand { font-family: var(--mono); letter-spacing: .12em; text-transform:
     <section class="panel agent">
       <div class="tag">Coding agent · you direct</div>
       <h2>You are the producer</h2>
+      <p class="phrase">You direct. It builds, tests, reports.</p>
       <svg viewBox="0 0 560 440" role="img" aria-label="Coding agent: you ask and approve; the agent works directly with your files, the terminal and the MPC, then reports back">
         <defs>
           <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a9ec6"/></marker>
@@ -159,6 +163,7 @@ footer .brand { font-family: var(--mono); letter-spacing: .12em; text-transform:
     <section class="panel agent">
       <div class="tag">Your rig · the agent orchestrates</div>
       <h2>Your next-gen producer agent</h2>
+      <p class="phrase">One agent across your whole rig.</p>
       <svg viewBox="0 0 560 440" role="img" aria-label="Your next-gen producer agent: you direct one agent that works across all your hardware and software — the MPC Sample and your other gear, your DAW, synths and virtual instruments">
         <defs>
           <marker id="g3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8b64c"/></marker>
