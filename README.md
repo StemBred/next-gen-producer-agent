@@ -17,7 +17,29 @@ Save it into your project folder (see *Set up* below). Do the same with **[mpc-s
 
 [![The producer, evolved — Three setups: you as the cable, you directing one agent, and your next-gen producer agent across your whole studio](images/chat-vs-agent.png)](https://raw.githubusercontent.com/StemBred/next-gen-producer-agent/main/images/chat-vs-agent.png)
 
-<sub>↑ Click the picture to open it full size.</sub>
+<sub>↑ Click the picture to open it full size. Each setup is also below, one at a time, so it's easier to read.</sub>
+
+<details>
+<summary><b>The three setups, one at a time</b> (click to open)</summary>
+
+**1. AI chat: you are the cable.** Everything runs through you.
+
+![AI chat: you copy, paste, run and report back on every step](images/panel-1-chat.png)
+
+**2. Coding agent: you are the producer.** You direct. It builds, tests, reports.
+
+![Coding agent: the same AI, plugged in. It works with your files, the terminal and the MPC, then reports back](images/panel-2-agent.png)
+
+**3. Your studio: your next-gen producer agent.** One agent across your whole studio.
+
+![Your next-gen producer agent: one agent across your hardware, DAW, synths and more](images/panel-3-studio.png)
+
+</details>
+
+### You're the cable
+Three cables still run through you. Each part of the series unplugs one more.
+
+[![You're the cable: language and prompts stay with you; SD card + restart and manual testing get cut in Parts 2 and 3](images/three-cables.png)](https://raw.githubusercontent.com/StemBred/next-gen-producer-agent/main/images/three-cables.png)
 
 ## The idea
 - **You describe, your agent builds.** You say what you want in your own words. Your agent writes a short spec, you approve it, then it builds and tests it.
