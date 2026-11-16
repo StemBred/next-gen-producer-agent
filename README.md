@@ -35,7 +35,7 @@ Every fix repeats 1 to 4, and **every message goes through you.**
 
 #### 2. Coding agent: you are the producer
 
-![Coding agent: the same AI, plugged in. It works with your files, the terminal and the MPC, then reports back](images/panel-2-agent.png)
+![Coding agent: the same AI, as an agent. It works with your files, the terminal and the MPC, then reports back](images/panel-2-agent.png)
 
 1. Ask in plain words, then approve the spec it writes.
 2. It writes the code, plus its own notes and memories.
