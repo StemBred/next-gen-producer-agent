@@ -22,17 +22,39 @@ Save it into your project folder (see *Set up* below). Do the same with **[mpc-s
 <details>
 <summary><b>The three setups, one at a time</b> (click to open)</summary>
 
-**1. AI chat: you are the cable.** Everything runs through you.
+#### 1. AI chat: you are the cable
 
-![AI chat: you copy, paste, run and report back on every step](images/panel-1-chat.png)
+![AI chat: you sit in the middle and carry every message between the chat, your files, the terminal and the MPC](images/panel-1-chat.png)
 
-**2. Coding agent: you are the producer.** You direct. It builds, tests, reports.
+1. Ask the chat, then copy the code it gives you.
+2. Paste the code into the right files.
+3. Run it, then copy any errors back into the chat.
+4. Swap the SD card, look at the screen, and describe what happened.
+
+Every fix repeats 1 to 4, and **every message goes through you.**
+
+#### 2. Coding agent: you are the producer
 
 ![Coding agent: the same AI, plugged in. It works with your files, the terminal and the MPC, then reports back](images/panel-2-agent.png)
 
-**3. Your studio: your next-gen producer agent.** One agent across your whole studio.
+1. Ask in plain words, then approve the spec it writes.
+2. It writes the code, plus its own notes and memories.
+3. It builds and runs it, and asks before installing anything.
+4. It pushes the change to the MPC, presses buttons and grabs the screen.
+5. It shows you the test result and teaches back what it did.
 
-![Your next-gen producer agent: one agent across your hardware, DAW, synths and more](images/panel-3-studio.png)
+You decide and approve. **The agent carries the work.**
+
+#### 3. Your studio: your next-gen producer agent
+
+![Your next-gen producer agent: one agent across your hardware, DAW, synths, virtual instruments and other creative tools](images/panel-3-studio.png)
+
+1. One agent that knows all your gear, not just the MPC.
+2. It moves work between your hardware and your DAW, synths and instruments.
+3. New gear or a new idea? Teach it once; it remembers.
+4. It keeps growing in the direction *you* build.
+
+One agent. **Your whole studio.**
 
 </details>
 
