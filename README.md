@@ -70,11 +70,13 @@ Three cables still run through you. Each part of the series unplugs one more.
 - **Open prompt, roll your own.** Copy what we typed if you get stuck, but the goal is that you build *your* ideas.
 
 ## Before you start
-1. **Claude Code**, installed and signed in (Claude Pro or higher): [Claude Code quickstart](https://code.claude.com/docs/en/quickstart)
-2. **A synced folder for backups**, for example Google Drive for desktop: [Use Google Drive for desktop](https://support.google.com/drive/answer/10838124)
-3. **Akai's official files** from [Akai's MPC Sample downloads page](https://www.akaipro.com/downloads-and-support/downloads/?product=MPC%20Sample): the **MPC Sample user guide** (PDF) and the **MPC Sample firmware updater**. Your agent only *reads* the updater. Never run it as part of this series.
-4. **An MPC Sample**, a **USB-C data cable** (charge-only cables won't work), and a **spare SD card you can erase**.
-5. **[`seed.md`](seed.md)** from this repo (see Step 1 above).
+1. **Your agent's home: Google Drive for desktop**, or any synced folder that shows up as a regular folder on your computer. Its files and memory live there, so they're backed up. Optional, but highly recommended: [Use Google Drive for desktop](https://support.google.com/drive/answer/10838124)
+2. **Claude Code**, installed and signed in. That's the agent. You need at least a **Claude Pro** plan: [Claude Code quickstart](https://code.claude.com/docs/en/quickstart). Other agents exist, but this series focuses first on Claude Code.
+3. **An MPC Sample**, a **USB-C data cable** (charge-only cables won't work), and a **spare SD card you can erase**. The card is where your agent puts its work; take it out and your MPC is stock.
+4. **Context from Akai**, from [Akai's MPC Sample downloads page](https://www.akaipro.com/downloads-and-support/downloads/?product=MPC%20Sample):
+   - the **MPC Sample user guide** (PDF): the user's side, every screen, button and workflow;
+   - the **MPC Sample firmware updater**: the system side, the operating system and software the MPC runs. Your agent only *reads* it. Never run it as part of this series.
+5. **Two files from this repo**: [`seed.md`](seed.md) turns a fresh agent into your MPC agent, and [`mpc-sample-proven.md`](mpc-sample-proven.md) is what our agent already proved, so yours doesn't start from zero (see Step 1 above).
 
 ## Set up (2 minutes)
 ```
